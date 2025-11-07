@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-
+import LinkNavbar from './partials/LinkNavbar';
 const Navbar = () => {
   return (
     <nav className="bg-white border-b shadow-sm">
@@ -7,18 +6,17 @@ const Navbar = () => {
         <h1 className="text-2xl font-extrabold text-[#1E8F4F]">Nama Sekolah</h1>
         <ul className="flex gap-6 text-lg">
           <li>
-            <Link data-page="home" className="nav-btn hover:text-[#1E8F4F]" to="/">Home</Link>
+            <LinkNavbar data="home" name="Home" nav="/"/>
           </li>
           <li>
-          <Link  data-page="about" className="nav-btn hover:text-[#1E8F4F]" to="/about">About</Link>
+            <LinkNavbar data="about" name="tentang kami" nav="/about" />
+
           </li>
           <li>
-            <Link data-page="prestasi"
-              className="nav-btn hover:text-[#1E8F4F]" to="/prestasi">Prestasi</Link>
+            <LinkNavbar data="prestasi" name="Prestasi" nav="/prestasi" />
           </li>
           <li>
-            <Link data-page="prestasi"
-              className="nav-btn hover:text-[#1E8F4F]" to="/kontak">Contact</Link>
+            <LinkNavbar data="kontak" name="kontak" nav="/kontak" />
           </li>
         </ul>
       </div>
